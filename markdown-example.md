@@ -4,14 +4,14 @@ A short Markdown reference for displaying documents on GitHub. For a full descri
 
 ---
 
-## Headings
-
 # Header 1
 ## Header 2
 ### Header 3
 #### Header 4
 ##### Header 5
 ###### Header 6
+
+---
 
 ## Code blocks
 
