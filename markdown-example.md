@@ -27,3 +27,30 @@ Nullam arcu.
 Aliquam consequat.
 
 ---
+
+> Duis ac tellus et risus vulputate vehicula.  
+> Donec lobortis risus a elit.  
+
+0. Item
+1. Item
+
+   nested paragraph
+   
+2. Item
+
+- Item A
+  1. a1
+  2. a2
+- ## Item B
+- Item C
+  - c1
+  - c2
+
+My task list for today
+- [x] finish homework
+- [ ] dinner
+
+The quick `brown` fox jumps over the `lazy` dog.
+
+The quick brown fox\
+jumps over the lazy dog.
