@@ -16,9 +16,9 @@ for i in a b c; do echo $i; done
 | A1       | B1       | C1       |
 | A2       | B2       | C2       |
 
-[dictionary website]: http://english.german-dictionary.net/ "English-German dictionary"
+[*dictionary website*]: http://english.german-dictionary.net/ "English-German dictionary"
 
-On this [dictionary website] you will find a English-German online dictionary.
+On this [*dictionary website*] you find a English-German online dictionary.
 
 ---
 
@@ -54,3 +54,13 @@ The quick `brown` fox jumps over the `lazy` dog.
 
 The quick brown fox\
 jumps over the lazy dog.
+
+Earth &#x1F30d;, Comet &#x2604;, Milky Way &#x1f30c;, Alien Monster &#x1f47e;.
+
+The **quick** brown fox *jumps* over the ~~keen~~ ***lazy*** dog.
+
+[DuckDuckGo](<https://www.duckduckgo.com> "DuckDuckGo") search engine.
+
+Jump to the [beginning](#header-1) of the page.
+
+
