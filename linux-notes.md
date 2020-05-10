@@ -3,25 +3,25 @@
 _These are just random notes for me to remember how things work. If someone reads this, be aware that the commands can cause data loss and system corruption._
 
 [Bash](#Bash)\
-[Manual pages](#Manual\ pages)\
+[Manual pages](#Manual-pages)\
 [Directories](#Directories)\
 [Search](#Search)\
 [Permissions](#Permissions)\
-[Program output](#Program\ output)\
+[Program output](#Program-output)\
 [Pipes](#Pipes)\
-[Environment variables](#Environment\ variables)\
+[Environment variables](#Environment-variables)\
 [Logging](#Logging)\
-[Shutdown and restart](#Shutdown\ and\ restart)\
+[Shutdown and restart](#Shutdown)\
 [Runlevels](#Runlevels)\
-[Process management](#Process\ management)\
-[User management](#User\ management)\
-[Disk partitioning](#Disk\ partitioning)\
-[Network analysis](#Network\ analysis)\
-[IP - Internet Protocol](#IP\ -\ Internet\ Protocol)\
-[Multiples of bytes](#Multiples\ of\ bytes)\
+[Process management](#Process-management)\
+[User management](#User-management)\
+[Disk partitioning](#Disk-partitioning)\
+[Network analysis](#Network-analysis)\
+[IP - Internet Protocol](#IP-Internet-Protocol)\
+[Multiples of bytes](#Byte-Multiples)\
 [Numpad](#Numpad)\
 [Tools](#Tools)\
-[Miscellaneous topics](#Miscellaneous\ topics)\
+[Miscellaneous topics](#Miscellaneous)\
 [References](#References)
 
 ## Bash
@@ -69,7 +69,7 @@ Example:
 		$ more foo.txt bar.txt
 		$ less !*
 
-## Manual pages
+## Manual-pages
 
 * `man [section-number] <item>` Show the first manual page found for "item".
 * `man -f <item>` / `whatis <item>` List all manual pages found for "item".
@@ -161,7 +161,7 @@ If several users have access to the same directory like /tmp it would be possibl
 
 	chmod a+t <dir>
 
-## Program output
+## Program-output
 
 Redirect stdout and stderr to separate files:
 
@@ -190,7 +190,7 @@ One powerful UNIX feature is to concatenate several programs with pipes '|' to p
 	367   Nordamerika
 	42    Ozeanien
 
-## Environment variables
+## Environment-variables
 
 * `export NAME="value"` Create or update variable.
 * `unset NAME` Delete variable.
@@ -211,7 +211,7 @@ Example:
 
 System log files: _/var/log/messages*_
 
-## Shutdown and restart
+## Shutdown
 
 * `shutdown` Power-off in 1min.
 * `shutdown now` Power-off immediately.
@@ -241,7 +241,7 @@ System log files: _/var/log/messages*_
 	emergency.target: most minimal system
 	...
 
-## Process management
+## Process-management
 ### Process listing
 The boot process
 
@@ -273,7 +273,7 @@ All processes (-e) with full format (-f) display as ASCII art tree (--forest):
 * `kill -s SIGSTOP pid` Suspend process.
 * `kill -s SIGCONT pid` Resume process.
 
-## User management
+## User-management
 
 ### Basic commands
 
@@ -329,7 +329,7 @@ Contains all user and system accounts.
 
 Examples
 
-* root user: 'root:x:0:0:root:/root:/bin/bash'
+* root user: `root:x:0:0:root:/root:/bin/bash`
 	* name: root
 	* password: x
 	* UID: 0
@@ -340,14 +340,14 @@ Examples
 
 	'password: x' means that the encrypted password is stored in /etc/shadow.
 
-* sync user: 'sync:x:5:0:sync:/sbin:/bin/sync'
+* sync user: `sync:x:5:0:sync:/sbin:/bin/sync`
 	* UID: 5
 	* GID: 0
 	* shell: /bin/sync
 
 	The sync user can only run /bin/sync.
 
-* daemon user: 'daemon:x:2:2:daemon:/sbin:/sbin/nologin'
+* daemon user: `daemon:x:2:2:daemon:/sbin:/sbin/nologin`
 	* UID: 2
 	* GID: 2
 	* shell: /sbin/nologin
@@ -357,7 +357,7 @@ Examples
 		$ nologin
 		This account is currently not available.
 
-* Anonymous user: 'nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin'
+* Anonymous user: `nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin`
 	* name: nobody
 	* UID: 65534
 	* GID: 65534
@@ -371,7 +371,7 @@ Shadowed password file. Contains the encrypted password for all users.
 
 Example
 
-* jdoe:$x$xxxxxx...x/::0:99999:7:::
+* `jdoe:$x$xxxxxx...x/::0:99999:7:::`
 	* name: jdoe
 	* enrcypted password: "$x$x...x/"
 	* last changed: - (password aging feature disabled)
@@ -395,7 +395,7 @@ Contains all user groups.
 
 Example
 
-* wheel:x:10:jdoe
+* `wheel:x:10:jdoe`
 	* name: wheel
 	* password: x
 	* GID: 10
@@ -413,7 +413,7 @@ entry format: group\_name:password:admins:members
 
 Example
 
-* wheel:::jdoe
+* `wheel:::jdoe`
 	* name: wheel
 	* password: - (only group members can gain group permissions)
 	* admins: - (no admins that can change the password or the members of the group)
@@ -449,7 +449,7 @@ Definitions for user account creation.
 	SYS_GID_MIN               201
 	SYS_GID_MAX               999
 
-## Disk partitioning
+## Disk-partitioning
 
 `fdisk /dev/<device-name>` Manage partitions on device.
 
@@ -489,7 +489,7 @@ Info about block devices, the filesystem and mountpoint
 * `lsblk -f`
 * `findmnt`
 
-## Network analysis
+## Network-analysis
 
 ### Network layer models
 
@@ -608,7 +608,7 @@ Network services. Example entries:
 	mdqs            666/tcp doom                    # doom Id Software
 	mdqs            666/udp doom                    # doom Id Software
 
-## IP - Internet Protocol
+## IP-Internet-Protocol
 
 * Routing datagrams from a source host interface to a destination host interface across one or more IP networks.
 * Provide an addressing system.
@@ -692,7 +692,7 @@ The router NAT replaces the private source address with the public source addres
 When receiving the answer datagram at the public interface of the router the public destination address is mapped to the private destination address.
 With NAT even a large network can be created and connected to the Internet with a single public IP address.
 
-## Multiples of bytes
+## Byte-Multiples
 
 	SI units
 	1 Kilobyte (KB)                = 1000       bytes
@@ -781,7 +781,7 @@ On <https://www.babylon-software.com/free-dictionaries/> there are many free dic
 
 The dictionaries can be imported into GoldenDict.
 
-## Miscellaneous topics
+## Miscellaneous
 ### General work flow
 * make a copy any file, variable, etc. before editing it
 * try commands in a VM first
