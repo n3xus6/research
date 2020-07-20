@@ -10,3 +10,6 @@ Building a custom [Linux kernel and initramfs](./initramfs.md).
 Summary [Markdown syntax](./markdown-example.md).
 
 Notes on [Linux](./linux-notes.md).
+
+[Vim cheat sheet](./vim-cheat-sheet.md).
+
