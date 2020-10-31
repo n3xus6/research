@@ -71,7 +71,7 @@ The following screenshot shows two **Sierpinski triangles** with different recur
 
 ![SIERPINSKI_SCREENSHOT](fract/screenshot_sierpinski.png)
 
-The program to draw the figure is available [here](https://github.com/n3xus6/ncurses-examples/blob/master/sierpinski.c).
+The program to draw the figure is available [here](https://github.com/n3xus6/ncurses/blob/master/sierpinski.c).
 
 ## References
 
