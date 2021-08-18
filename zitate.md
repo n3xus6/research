@@ -17,3 +17,8 @@
 **Julia Scher (\* 1954) - American artist**
 
 "The idea that something is artistic when the qualities of the result control the process of production may better fit into science. I am open to the result, as art is not an experimental test of a hypothesis. It is an irrational process. It is all unexpected."
+
+**David Hilbert (\* 1862 - † 1943) - Mathematician**
+
+Wir müssen wissen. \
+Wir werden wissen.
