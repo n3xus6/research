@@ -47,11 +47,13 @@ Example: twos complement of 11100000 (-32):
 
 ### Negation
 
-Negation is done by taking the twos complement. But note that 128 can not be represented:
+Negation is done by taking the twos complement. But note that for 128 it will not work of course:
 
 10000000 (-128) \
-01111111 (after bitwise complement) \
-10000000 ! (after adding 1)
+01111111 (after doing the bitwise complement) \
+10000000 (after adding 1)
+
+What follows is that an int8_t variable with the value -128 will not change if it's negated.
 
 ### Addition
 
@@ -95,7 +97,7 @@ Twos complement of 42 is -42:
 11010101 (after inverting all bits)
 11010110 (after adding one: -42)
 ```
-
+Now perform the Addition with the new value:
 ```
   01100100 (100)
 + 11010110 (-42)
@@ -106,4 +108,4 @@ The **carry over** from the last bit is ignored in the result.
 
 ### Conclusion
 
-We have seen how the computer does integer arithmetic internally using the twos complement form. If we add/substract integers the result can become incorrect due to overlow. The result becomes clear if we reproduce the calculation steps in twos complement representation. This was just a glimps how twos complement works. In books teaching system architecture and low-level programming you can find further material. Also check the CPU and the Compiler manuals. Take caution with bit manipulation on signed integers. Some border cases are implementation-defined.
+We have seen how the computer does integer arithmetic internally using the twos complement representation. If we add/substract integers the result can become incorrect due to overlow. The result becomes clear if we reproduce the calculation steps in twos complement representation. This was just a glimps how twos complement works. In books teaching system architecture and low-level programming you can find further material. Also check the CPU and the Compiler manuals. Take caution with bit manipulation on signed integers. Some border cases are implementation-defined.
