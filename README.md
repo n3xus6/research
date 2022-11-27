@@ -13,3 +13,6 @@ Notes on [Linux](./linux-notes.md).
 
 [Vim cheat sheet](./vim-cheat-sheet.md).
 
+[Twos complement](./twos_complement.md).
+
+Calculating [Prim numbers](./src/primes.c).
