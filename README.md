@@ -15,4 +15,6 @@ Notes on [Linux](./linux-notes.md).
 
 [Twos complement](./twos_complement.md).
 
-Calculating [Prim numbers](./src/primes.c).
+Calculating [Prime numbers](./src/primes.c).
+
+[PowerPC Emulation](./powerpc_emu.md).
